@@ -1,0 +1,21 @@
+# KiCad backups and temporary files
+*-backups/
+*.lck
+*.kicad_prl
+*.kicad_sch-bak
+*.kicad_pcb-bak
+
+# LTspice generated output
+*.raw
+*.log
+*.op.raw
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Build output
+build/
+Debug/
+Release/
