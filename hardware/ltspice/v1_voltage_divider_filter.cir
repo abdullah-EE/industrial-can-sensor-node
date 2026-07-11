@@ -1,0 +1,19 @@
+* Version 1 12 V supply divider and ADC filter
+* Simulation only. Used to check divider range and RC response.
+
+.param RTOP=100k
+.param RBOT=27k
+.param RFILT=1000
+.param CFILT=47n
+
+Vin VIN_12V 0 PWL(0 0 1m 12 8m 12 10m 9 14m 9 16m 15 22m 15)
+Rtop VIN_12V VSENSE_RAW {RTOP}
+Rbot VSENSE_RAW 0 {RBOT}
+Rfilt VSENSE_RAW VSENSE_ADC {RFILT}
+Cfilt VSENSE_ADC 0 {CFILT}
+
+.tran 0 25m 0 10u
+.meas tran V_ADC_12V FIND V(VSENSE_ADC) AT=5m
+.meas tran V_ADC_9V FIND V(VSENSE_ADC) AT=12m
+.meas tran V_ADC_15V FIND V(VSENSE_ADC) AT=20m
+.end

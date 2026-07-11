@@ -1,0 +1,21 @@
+Category,Qty,Reference,Part,Value_or_Rating,Package_or_Module,Status,Notes,Source
+Development,1,U_DEV1,NUCLEO-G0B1RE,STM32G0B1RE Nucleo-64 board,Dev board,Selected,First bring-up MCU board with debug,https://www.st.com/en/evaluation-tools/nucleo-g0b1re.html
+Motor,1,M1,Small brushed DC motor,12 V 1 A to 2 A target,User selected,Open,Exact motor and stall current still unknown,
+Power switch,1,Q1,Logic-level N-MOSFET,TBD 30 V minimum low Rds(on),TO-220 or DPAK,Open,Must be characterized at actual gate-drive voltage,
+Gate drive,1,U_GATE1,TC4427A or similar,Dual 1.5 A MOSFET gate driver,DIP/SOIC,Candidate,May be bypassed if MOSFET is proven safe with direct 3.3 V drive,https://www.microchip.com/en-us/product/TC4427A
+Flyback,1,D1,Schottky or fast diode,3 A 40 V minimum,Through-hole or SMB,Open,Provides motor current path when MOSFET turns off,
+Current sense,1,R_SHUNT1,Current shunt,0.05 ohm 1 W,2512 or larger,Candidate,0.2 W at 2 A so use margin,
+Current sense,1,U_ISENSE1,INA180A1,Gain 20 V/V,SOT-23-5,Selected,2 A with 0.05 ohm gives about 2.0 V output,https://www.ti.com/product/INA180
+Voltage sense,1,R_VTOP1,Resistor,100 k 1 percent,0603/0805,Candidate,12 V divider top resistor,
+Voltage sense,1,R_VBOT1,Resistor,27 k 1 percent,0603/0805,Candidate,12 V divider bottom resistor,
+Filtering,2,C_ADC1 C_ADC2,Capacitor,10 nF to 100 nF,0603/0805,Candidate,ADC low-pass filters,
+Temperature,1,R_NTC1,NTC thermistor,10 k nominal,Through-hole or 0603,Open,Place near MOSFET or motor connector,
+CAN,1,U_CAN1,TCAN332 or similar,3.3 V CAN transceiver,SOIC/SOT,Candidate,Matches STM32 3.3 V logic,https://www.ti.com/product/TCAN332
+CAN,1,R_TERM1,Resistor,120 ohm,0603/0805,Candidate,Optional CAN bus termination,
+CAN,1,J_CAN1,Connector,CANH CANL GND,Terminal block or JST,Open,Add strain relief later,
+Input protection,1,F1,Fuse or resettable fuse,TBD around 2 A to 3 A,Holder or PTC,Open,Select after motor current is measured,
+Input protection,1,D_TVS1,TVS diode,TBD for 12 V rail,SMBJ/SMAJ,Open,Footprint placeholder until transient requirement is defined,
+Power,1,C_BULK1,Electrolytic capacitor,470 uF 25 V,Radial or SMD,Candidate,Near motor supply connector,
+Power,2,C_DEC1 C_DEC2,Ceramic capacitor,100 nF,0603/0805,Candidate,Local IC decoupling,
+Vibration,1,J_ACC1,Accelerometer header,I2C/SPI 3.3 V,0.1 in header,Selected,Use LIS3DH-class module first,https://www.st.com/en/mems-and-sensors/lis3dh.html
+Test,10,TP*,Test points,TBD,Loop or pad,Selected,12 V gate switch node shunt ADC CAN ground,

@@ -4,6 +4,10 @@
 *.kicad_prl
 *.kicad_sch-bak
 *.kicad_pcb-bak
+**/.history/
+.tmp_kicad_netlist.xml
+.kicad_config/
+.kicad_cache/
 
 # LTspice generated output
 *.raw

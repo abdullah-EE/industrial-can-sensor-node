@@ -1,0 +1,21 @@
+* Version 1 shunt current sense and ADC filter
+* Simulation only. INA180 behavior is approximated by a voltage-controlled source.
+
+.param RSHUNT=0.05
+.param GAIN=20
+.param ADC_R=1000
+.param ADC_C=47n
+
+* 0 A to 2.5 A pulse represents motor current for signal-chain exploration.
+Iload VMOTOR SHUNT_NODE PULSE(0 2.5 1m 100u 100u 3m 6m)
+Vmotor VMOTOR 0 12
+Rshunt SHUNT_NODE 0 {RSHUNT}
+
+* Idealized current-sense amplifier output = shunt voltage * gain.
+Eina ISENSE_RAW 0 VALUE={V(SHUNT_NODE)*GAIN}
+Radc ISENSE_RAW ISENSE_ADC {ADC_R}
+Cadc ISENSE_ADC 0 {ADC_C}
+
+.tran 0 12m 0 5u
+.meas tran V_ISENSE_MAX MAX V(ISENSE_ADC) FROM=0 TO=12m
+.end

@@ -2,9 +2,96 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid 571aab0c-f1c0-45bc-ab4b-e8310a045c75)
+	(uuid "571aab0c-f1c0-45bc-ab4b-e8310a045c75")
 	(paper "A4")
+	(title_block
+		(title "Smart Brushed DC Motor Controller - Version 1")
+		(date "2026-07-12")
+		(rev "0.1")
+		(company "Student portfolio project")
+		(comment 1 "First-pass schematic roadmap. Replace text blocks with checked symbols before PCB layout.")
+	)
 	(lib_symbols)
+	(text "VERSION 1 SELECTED ARCHITECTURE"
+		(at 18 18 0)
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.3)
+			)
+			(justify left)
+		)
+	)
+	(text "NUCLEO-G0B1RE + one-direction low-side MOSFET + shunt current sensing + CAN transceiver"
+		(at 18 25 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.15)
+			)
+			(justify left)
+		)
+	)
+	(text "1 INPUT PROTECTION AND MOTOR SUPPLY\nJ1: VIN_12V, PGND\nF1: fuse/PTC after motor current is measured\nD_TVS1: TVS footprint placeholder, final value TBD\nC_BULK1: 470uF 25V near motor connector\nNets: VIN_12V, VMOTOR_12V, PGND"
+		(at 18 38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify left)
+		)
+	)
+	(text "2 LOW-SIDE MOTOR SWITCH\nM1: small 12V brushed DC motor\nQ1: logic-level N-MOSFET, exact part TBD\nD1: flyback diode from MOTOR_SW to VMOTOR_12V\nR_GATE: 22 ohm start value\nR_PD: 100k gate pulldown\nNets: PWM_GATE, MOTOR_SW, MOTOR_CURRENT_SHUNT_HI"
+		(at 18 72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify left)
+		)
+	)
+	(text "3 CURRENT SENSE\nR_SHUNT1: 0.05 ohm 1W candidate\nU_ISENSE1: INA180A1 gain 20 candidate\nRC filter before STM32 ADC\nNets: MOTOR_CURRENT_SHUNT_HI, MOTOR_CURRENT_SHUNT_LO, ISENSE_ADC, AGND"
+		(at 18 109 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify left)
+		)
+	)
+	(text "4 VOLTAGE AND TEMPERATURE SENSE\nR_VTOP1/R_VBOT1: 100k/27k candidate divider\nR_NTC1: 10k NTC candidate near MOSFET or motor connector\nRC filters near ADC pins\nNets: VSENSE_ADC, TEMP_ADC, VDD_3V3, AGND"
+		(at 18 138 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify left)
+		)
+	)
+	(text "5 STM32 NUCLEO AND CAN\nU_DEV1: NUCLEO-G0B1RE header interface\nU_CAN1: 3.3V CAN transceiver candidate TCAN332\nR_TERM1: optional 120 ohm termination jumper\nJ_ACC1: 3.3V I2C/SPI accelerometer module header\nNets: CAN_TX, CAN_RX, CANH, CANL, VDD_3V3"
+		(at 18 165 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify left)
+		)
+	)
+	(text "REQUIRED TEST POINTS\nTP_VIN_12V, TP_VMOTOR_12V, TP_PWM_GATE, TP_MOTOR_SW, TP_SHUNT_HI, TP_SHUNT_LO,\nTP_ISENSE_ADC, TP_VSENSE_ADC, TP_TEMP_ADC, TP_3V3, TP_CANH, TP_CANL, TP_PGND"
+		(at 18 198 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify left)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")

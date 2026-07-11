@@ -1,13 +1,15 @@
 # LTspice Simulations
 
-Save LTspice files here.
+These files are starter simulations for Version 1 of the 12 V brushed DC motor controller.
 
-Start with these simulations:
+Current files:
 
-1. reverse-polarity protection
-2. input surge and TVS clamping
-3. 24 V to 5 V buck stage
-4. 0–10 V analog divider and RC filter
-5. safe-state output driver
+- `v1_low_side_motor_switch.cir` - low-side MOSFET motor switch with flyback diode and shunt resistor
+- `v1_current_sense_filter.cir` - shunt plus current-sense gain and ADC RC filter
+- `v1_voltage_divider_filter.cir` - 12 V rail divider and ADC RC filter
 
-Do not treat simulated results as measured hardware performance.
+Rules:
+
+- Do not treat simulated results as measured hardware performance.
+- Replace generic device models with manufacturer models when the exact MOSFET, diode, and amplifier are selected.
+- Record any plotted waveforms or measurements in a separate simulation note before comparing to hardware.

@@ -1,0 +1,32 @@
+* Version 1 low-side MOSFET brushed-DC motor switch
+* Simulation only. This is not measured hardware validation.
+
+.param VM=12
+.param PWMF=20000
+.param DUTY=0.50
+.param RMOTOR=6
+.param LMOTOR=1m
+.param RSHUNT=0.05
+
+Vbat VMOTOR 0 {VM}
+Vpwm GATE_CTRL 0 PULSE(0 5 0 50n 50n {DUTY/PWMF} {1/PWMF})
+
+Rg GATE_CTRL GATE 22
+Rpd GATE 0 100k
+
+M1 SW GATE SENSE 0 NMOS_LOGIC
+Rshunt SENSE 0 {RSHUNT}
+
+Rmotor VMOTOR MTR_INT {RMOTOR}
+Lmotor MTR_INT SW {LMOTOR}
+Dfly SW VMOTOR DFLY
+Cbulk VMOTOR 0 470u Rser=0.05
+
+.model DFLY D(Is=1n Rs=0.05 N=1.05 Cjo=200p Bv=40 Ibv=1m)
+.model NMOS_LOGIC NMOS(Vto=2.0 Kp=80m Rd=20m Rs=10m Rg=2 Cgdmax=1n Cgs=1.5n Cds=200p)
+
+.tran 0 10m 0 1u
+.meas tran I_MOTOR_AVG AVG I(Rmotor) FROM=5m TO=10m
+.meas tran I_MOTOR_PK MAX I(Rmotor) FROM=0 TO=10m
+.meas tran V_SW_PK MAX V(SW) FROM=0 TO=10m
+.end

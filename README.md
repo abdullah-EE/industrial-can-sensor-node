@@ -1,41 +1,34 @@
-# Industrial CAN Sensor Node
+# Smart Brushed DC Motor Controller and Monitor
 
-A staged electrical and embedded-systems portfolio project for industrial, robotics, electronics, and hardware internships.
+A staged electrical and embedded-systems portfolio project for industrial, robotics, electronics, power electronics, and hardware-test internships.
 
 ## Goal
-Design and later build a protected 24 V industrial sensor node that:
 
-- reads analog and digital sensors,
-- communicates over CAN,
-- detects power, sensor, and communication faults,
-- enters a safe state when necessary,
-- records and reports diagnostic information.
+Design and later build a low-voltage brushed DC motor controller that:
 
-## Current phase
-**Phase 1: online design and simulation**
+- controls a small 12 V brushed DC motor with PWM
+- measures motor current and supply voltage
+- monitors temperature and vibration
+- detects stall, overcurrent, overheating, undervoltage, sensor failure, and CAN timeout
+- shuts the motor down safely during critical faults
+- communicates status and commands over CAN
+- starts on a dev board and moves toward a custom PCB only after the basics are proven
 
-The first stage focuses on requirements, component selection, LTspice simulations, KiCad schematic and PCB design, firmware architecture, and a validation plan. Physical assembly and lab testing will come later.
+## Current Version 1 Direction
 
-## Repository structure
+Version 1 uses an STM32 Nucleo board, a discrete one-direction low-side MOSFET motor switch, shunt current sensing, divided supply-voltage sensing, basic temperature sensing, an accelerometer header, and a CAN transceiver.
 
-- `hardware/kicad/` — KiCad schematic and PCB files
-- `hardware/ltspice/` — LTspice simulations
-- `firmware/` — STM32 firmware
-- `docs/` — requirements, architecture, CAN protocol, and design decisions
-- `tests/` — fault matrix and validation procedures
+This is intentionally not a BLDC, FOC, cloud, AI, dashboard, or high-power motor project.
 
-## Planned technical scope
+## Repository Structure
 
-- protected 18–30 V DC input
-- 24 V to 5 V buck stage
-- 5 V to 3.3 V regulation
-- STM32 microcontroller
-- CAN transceiver
-- 0–10 V analog sensor input
-- digital sensor input
-- watchdog supervision
-- safe-state output
-- diagnostic fault codes
+- `docs/` - research notes, requirements, architecture, design decisions, and build plan
+- `hardware/bom.csv` - first-pass bill of materials
+- `hardware/ltspice/` - simulation starters
+- `hardware/kicad/` - KiCad hardware notes
+- `kicad/` - KiCad project files
+- `firmware/` - STM32 firmware scaffold
 
-## Status
-This repository is under active development. Simulation is not being presented as physical validation; measured results will be added after the board is fabricated and tested.
+## Validation Rule
+
+Simulation results and measured results are separate. Anything in LTspice is design exploration until it is later checked on real hardware with a current-limited supply, meter, oscilloscope, and documented test procedure.
