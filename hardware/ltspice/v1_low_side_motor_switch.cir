@@ -4,7 +4,7 @@
 .param VM=12
 .param PWMF=20000
 .param DUTY=0.50
-.param RMOTOR=6
+.param RMOTOR=16
 .param LMOTOR=1m
 .param RSHUNT=0.05
 

@@ -1,21 +1,22 @@
-Category,Qty,Reference,Part,Value_or_Rating,Package_or_Module,Status,Notes,Source
-Development,1,U_DEV1,NUCLEO-G0B1RE,STM32G0B1RE Nucleo-64 board,Dev board,Selected,First bring-up MCU board with debug,https://www.st.com/en/evaluation-tools/nucleo-g0b1re.html
-Motor,1,M1,Small brushed DC motor,12 V 1 A to 2 A target,User selected,Open,Exact motor and stall current still unknown,
-Power switch,1,Q1,Logic-level N-MOSFET,TBD 30 V minimum low Rds(on),TO-220 or DPAK,Open,Must be characterized at actual gate-drive voltage,
-Gate drive,1,U_GATE1,TC4427A or similar,Dual 1.5 A MOSFET gate driver,DIP/SOIC,Candidate,May be bypassed if MOSFET is proven safe with direct 3.3 V drive,https://www.microchip.com/en-us/product/TC4427A
-Flyback,1,D1,Schottky or fast diode,3 A 40 V minimum,Through-hole or SMB,Open,Provides motor current path when MOSFET turns off,
-Current sense,1,R_SHUNT1,Current shunt,0.05 ohm 1 W,2512 or larger,Candidate,0.2 W at 2 A so use margin,
-Current sense,1,U_ISENSE1,INA180A1,Gain 20 V/V,SOT-23-5,Selected,2 A with 0.05 ohm gives about 2.0 V output,https://www.ti.com/product/INA180
-Voltage sense,1,R_VTOP1,Resistor,100 k 1 percent,0603/0805,Candidate,12 V divider top resistor,
-Voltage sense,1,R_VBOT1,Resistor,27 k 1 percent,0603/0805,Candidate,12 V divider bottom resistor,
-Filtering,2,C_ADC1 C_ADC2,Capacitor,10 nF to 100 nF,0603/0805,Candidate,ADC low-pass filters,
-Temperature,1,R_NTC1,NTC thermistor,10 k nominal,Through-hole or 0603,Open,Place near MOSFET or motor connector,
-CAN,1,U_CAN1,TCAN332 or similar,3.3 V CAN transceiver,SOIC/SOT,Candidate,Matches STM32 3.3 V logic,https://www.ti.com/product/TCAN332
-CAN,1,R_TERM1,Resistor,120 ohm,0603/0805,Candidate,Optional CAN bus termination,
-CAN,1,J_CAN1,Connector,CANH CANL GND,Terminal block or JST,Open,Add strain relief later,
-Input protection,1,F1,Fuse or resettable fuse,TBD around 2 A to 3 A,Holder or PTC,Open,Select after motor current is measured,
-Input protection,1,D_TVS1,TVS diode,TBD for 12 V rail,SMBJ/SMAJ,Open,Footprint placeholder until transient requirement is defined,
-Power,1,C_BULK1,Electrolytic capacitor,470 uF 25 V,Radial or SMD,Candidate,Near motor supply connector,
-Power,2,C_DEC1 C_DEC2,Ceramic capacitor,100 nF,0603/0805,Candidate,Local IC decoupling,
-Vibration,1,J_ACC1,Accelerometer header,I2C/SPI 3.3 V,0.1 in header,Selected,Use LIS3DH-class module first,https://www.st.com/en/mems-and-sensors/lis3dh.html
-Test,10,TP*,Test points,TBD,Loop or pad,Selected,12 V gate switch node shunt ADC CAN ground,
+Category,Qty,Reference,Manufacturer,Manufacturer Part Number,Value_or_Rating,Package_or_Module,Status,Notes,Source
+Development,1,U_DEV1,STMicroelectronics,NUCLEO-G0B1RE,STM32G0B1RE Nucleo-64 board,Dev board,Selected,First bring-up MCU board with SWD/debug and FDCAN-capable MCU,https://www.st.com/en/evaluation-tools/nucleo-g0b1re.html
+Motor,1,M1,Pololu,3039,50:1 Micro Metal Gearmotor HPCB 12V; 80 mA no-load; 0.75 A extrapolated stall,10x12 mm micro gearmotor,Selected,Small safe bench motor; no encoder for Version 1,https://www.pololu.com/product/3039
+Power switch,1,Q1,Infineon,IRLZ44NPBF,55 V N-channel logic-level MOSFET,TO-220-3,Selected,Overkill current rating but beginner-friendly and easy to solder/probe,https://www.infineon.com/part/IRLZ44N
+Gate drive,1,U_GATE1,Microchip,TC4427ACPA,1.5 A dual non-inverting MOSFET driver,PDIP-8,Selected,5 V gate drive from Nucleo 5 V rail; unused input grounded,https://www.microchip.com/en-us/product/TC4427A
+Flyback,1,D1,Diodes Incorporated,1N5822,3 A 40 V Schottky rectifier,DO-201AD,Selected,Flyback diode across motor for low-side switching,https://www.diodes.com/part/view/1N5822
+Current sense,1,R_SHUNT1,Bourns,CSS2H-2512R-L500F,0.05 ohm 1 percent current sense resistor,2512,Selected,0.028 W at 0.75 A stall; about 0.072 W at 1.2 A limit,
+Current sense,1,U_ISENSE1,Texas Instruments,INA180A1IDBVR,Gain 20 V/V current-sense amplifier,SOT-23-5,Selected,0.05 ohm shunt gives 1 V/A into ADC,https://www.ti.com/product/INA180
+Voltage sense,1,R_VTOP1,Yageo,RC0805FR-07100KL,100 k 1 percent,0805,Selected,12 V divider top resistor,
+Voltage sense,1,R_VBOT1,Yageo,RC0805FR-0727KL,27 k 1 percent,0805,Selected,12 V divider bottom resistor,
+Filtering,2,C_ADC1 C_ADC2,KYOCERA AVX,08055C473KAT2A,47 nF 50 V X7R,0805,Selected,ADC low-pass filter capacitors,
+Temperature,1,R_NTC1,EPCOS / TDK,B57540G0103F000,10 k NTC thermistor,Through-hole bead,Selected,Simple board/motor-area temperature input,
+CAN,1,U_CAN1,Texas Instruments,TCAN332DR,3.3 V CAN transceiver,SOIC-8,Selected,Matches STM32 3.3 V logic and keeps CAN simple,https://www.ti.com/product/TCAN332
+CAN,1,R_TERM1,Yageo,RC0805FR-07120RL,120 ohm 1 percent,0805,Selected,Optional CAN bus termination via jumper,
+CAN,1,J_CAN1,On Shore Technology,OSTVN03A150,CANH CANL GND terminal block,3.5 mm 3-position,Selected,Simple screw terminal for bench CAN wiring,
+Input protection,1,F1,Littelfuse,RXEF110,Resettable PTC; 1.10 A hold; 2.20 A trip,Radial PTC,Selected,Allows normal and short stall testing but trips on sustained faults,
+Input protection,1,D_TVS1,Littelfuse,SMBJ18A,600 W unidirectional TVS; 18 V standoff,SMB/DO-214AA,Selected,Clamps supply transients below MOSFET voltage margin,https://www.littelfuse.com/products/overvoltage-protection/tvs-diodes/surface-mount/smbj/smbj18a
+Power,1,C_BULK1,Panasonic,EEU-FR1E471,470 uF 25 V low-ESR electrolytic,Radial,Selected,Near motor supply connector,
+Power,4,C_DEC*,KYOCERA AVX,08055C104KAT2A,100 nF 50 V X7R,0805,Selected,Local IC and connector decoupling,
+Vibration,1,J_ACC1,Sullins,PPTC041LFBN-RC,Accelerometer module header 3.3 V I2C/SPI,0.1 in 1x4 header,Selected,Header only; LIS3DH-class module later,
+Debug,1,J_NUCLEO1,Sullins,PPTC101LFBN-RC,Nucleo signal header interface,0.1 in 1x10 header,Selected,Breaks out PWM ADC CAN and supplies,
+Test,13,TP*,Keystone,5000,Loop test point,THT loop,Selected,VIN VMOTOR gate switch shunt ADC CAN and ground test points,

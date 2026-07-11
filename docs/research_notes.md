@@ -55,3 +55,19 @@ Across manufacturer forums, KiCad discussions, PCB review discussions, and stude
 ## Version 1 Research Conclusion
 
 The best first version is a one-direction, low-side MOSFET motor controller using an STM32 Nucleo board and simple sensors. It gives strong internship value because it includes real power switching, embedded control, ADC sensing, fault handling, CAN, schematic capture, simulation, and eventual PCB layout, while staying buildable for a first-year student.
+
+## Version 1 Part Selection Update
+
+The motor was narrowed to Pololu item 3039, a 50:1 Micro Metal Gearmotor HPCB 12V. The important manufacturer data points are 12 V rated voltage, 80 mA no-load current, and 0.75 A extrapolated stall current. Pololu also warns that stall values are theoretical and that stalling can damage the motor or gearbox. Source: https://www.pololu.com/product/3039
+
+The larger DFRobot 12 V encoder gearmotor class was not selected for Version 1 because published product data shows stall currents in the several-amp range. That would force a higher-current first build and move the project away from the requested low-cost, simple 1 A to 2 A bench target.
+
+Final Version 1 critical parts selected from manufacturer documentation:
+
+- Infineon IRLZ44NPBF MOSFET
+- Microchip TC4427ACPA MOSFET driver
+- Diodes Incorporated 1N5822 Schottky flyback diode
+- Texas Instruments INA180A1IDBVR current-sense amplifier
+- Texas Instruments TCAN332DR CAN transceiver
+- Littelfuse RXEF110 resettable PTC
+- Littelfuse SMBJ18A TVS diode

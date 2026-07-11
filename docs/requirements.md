@@ -11,7 +11,7 @@ Version 1 is a bench-tested 12 V brushed DC motor controller and condition-monit
 | F-001 | Motor control | One-direction PWM control of a small brushed DC motor |
 | F-002 | PWM frequency | Start at 20 kHz unless switching losses or measurement noise require adjustment |
 | F-003 | Motor voltage | Nominal 12 V DC |
-| F-004 | Motor current | Intended operating range up to about 1 A to 2 A |
+| F-004 | Motor current | Selected motor is 80 mA no-load and 0.75 A extrapolated stall; Version 1 shutdown target is 1.2 A |
 | F-005 | Current measurement | Low-side shunt and current-sense amplifier into STM32 ADC |
 | F-006 | Supply measurement | Resistor divider and RC filter into STM32 ADC |
 | F-007 | Temperature measurement | NTC or simple analog temperature sensor near MOSFET/motor connector |
@@ -55,8 +55,8 @@ Version 1 is a bench-tested 12 V brushed DC motor controller and condition-monit
 
 ## Open Uncertainties
 
-- Exact motor part number and measured stall current.
-- Final MOSFET part number after availability check.
+- Measured stall current for the exact purchased Pololu 3039 motor.
+- Real startup current waveform at the selected PWM frequency.
 - Whether the first CAN transceiver will be a breakout module or on a small custom board.
 - Exact accelerometer module choice.
 - Final ADC sampling rate and filter constants after noise measurements.

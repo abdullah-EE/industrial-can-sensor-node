@@ -1,0 +1,510 @@
+ERC report (2026-07-12T02:46:48, Encoding UTF8)
+Report includes: Errors, Warnings
+
+***** Sheet /
+[label_dangling]: Label not connected
+    ; error
+    @(24.92 mm, 32.46 mm): Global Label 'PGND'
+[label_dangling]: Label not connected
+    ; error
+    @(24.92 mm, 35.00 mm): Global Label 'VIN_12V'
+[label_dangling]: Label not connected
+    ; error
+    @(24.92 mm, 174.68 mm): Global Label 'PGND'
+[label_dangling]: Label not connected
+    ; error
+    @(24.92 mm, 177.22 mm): Global Label 'VDD_5V'
+[label_dangling]: Label not connected
+    ; error
+    @(24.92 mm, 179.76 mm): Global Label 'VDD_3V3'
+[label_dangling]: Label not connected
+    ; error
+    @(24.92 mm, 182.30 mm): Global Label 'CAN_RX'
+[label_dangling]: Label not connected
+    ; error
+    @(24.92 mm, 184.84 mm): Global Label 'CAN_TX'
+[label_dangling]: Label not connected
+    ; error
+    @(24.92 mm, 187.38 mm): Global Label 'TEMP_ADC'
+[label_dangling]: Label not connected
+    ; error
+    @(24.92 mm, 189.92 mm): Global Label 'VSENSE_ADC'
+[label_dangling]: Label not connected
+    ; error
+    @(24.92 mm, 192.46 mm): Global Label 'ISENSE_ADC'
+[label_dangling]: Label not connected
+    ; error
+    @(24.92 mm, 195.00 mm): Global Label 'PWM_FROM_STM32'
+[label_dangling]: Label not connected
+    ; error
+    @(34.92 mm, 86.00 mm): Global Label 'VMOTOR_12V'
+[label_dangling]: Label not connected
+    ; error
+    @(34.92 mm, 88.54 mm): Global Label 'MOTOR_SW'
+[label_dangling]: Label not connected
+    ; error
+    @(42.38 mm, 140.54 mm): Global Label 'MOTOR_CURRENT_SHUNT_HI'
+[label_dangling]: Label not connected
+    ; error
+    @(42.38 mm, 145.62 mm): Global Label 'PGND'
+[label_dangling]: Label not connected
+    ; error
+    @(47.46 mm, 135.38 mm): Global Label 'VDD_3V3'
+[label_dangling]: Label not connected
+    ; error
+    @(47.46 mm, 150.62 mm): Global Label 'PGND'
+[label_dangling]: Label not connected
+    ; error
+    @(50.00 mm, 31.19 mm): Global Label 'VIN_12V'
+[label_dangling]: Label not connected
+    ; error
+    @(50.00 mm, 38.81 mm): Global Label 'VMOTOR_12V'
+[label_dangling]: Label not connected
+    ; error
+    @(54.92 mm, 85.00 mm): Global Label 'PWM_GATE_DRIVE'
+[label_dangling]: Label not connected
+    ; error
+    @(57.62 mm, 143.00 mm): Global Label 'ISENSE_ADC'
+[label_dangling]: Label not connected
+    ; error
+    @(62.54 mm, 79.92 mm): Global Label 'MOTOR_SW'
+[label_dangling]: Label not connected
+    ; error
+    @(62.54 mm, 90.08 mm): Global Label 'MOTOR_CURRENT_SHUNT_HI'
+[label_dangling]: Label not connected
+    ; error
+    @(72.00 mm, 31.19 mm): Global Label 'VMOTOR_12V'
+[label_dangling]: Label not connected
+    ; error
+    @(72.00 mm, 38.81 mm): Global Label 'PGND'
+[label_dangling]: Label not connected
+    ; error
+    @(80.00 mm, 81.19 mm): Global Label 'MOTOR_CURRENT_SHUNT_HI'
+[label_dangling]: Label not connected
+    ; error
+    @(80.00 mm, 88.81 mm): Global Label 'PGND'
+[label_dangling]: Label not connected
+    ; error
+    @(82.00 mm, 134.19 mm): Global Label 'VMOTOR_12V'
+[label_dangling]: Label not connected
+    ; error
+    @(82.00 mm, 141.81 mm): Global Label 'VSENSE_ADC_RAW'
+[label_dangling]: Label not connected
+    ; error
+    @(87.30 mm, 195.08 mm): Global Label 'CAN_TX'
+[label_dangling]: Label not connected
+    ; error
+    @(87.30 mm, 197.62 mm): Global Label 'CAN_RX'
+[label_dangling]: Label not connected
+    ; error
+    @(95.00 mm, 31.19 mm): Global Label 'VMOTOR_12V'
+[label_dangling]: Label not connected
+    ; error
+    @(95.00 mm, 38.81 mm): Global Label 'PGND'
+[label_dangling]: Label not connected
+    ; error
+    @(98.00 mm, 134.19 mm): Global Label 'VSENSE_ADC_RAW'
+[label_dangling]: Label not connected
+    ; error
+    @(98.00 mm, 141.81 mm): Global Label 'PGND'
+[label_dangling]: Label not connected
+    ; error
+    @(100.00 mm, 184.84 mm): Global Label 'VDD_3V3'
+[label_dangling]: Label not connected
+    ; error
+    @(100.00 mm, 205.16 mm): Global Label 'PGND'
+[label_dangling]: Label not connected
+    ; error
+    @(102.54 mm, 80.08 mm): Global Label 'VMOTOR_12V'
+[label_dangling]: Label not connected
+    ; error
+    @(102.54 mm, 89.92 mm): Global Label 'MOTOR_SW'
+[label_dangling]: Label not connected
+    ; error
+    @(112.70 mm, 192.46 mm): Global Label 'CANL'
+[label_dangling]: Label not connected
+    ; error
+    @(112.70 mm, 197.54 mm): Global Label 'CANH'
+[label_dangling]: Label not connected
+    ; error
+    @(114.00 mm, 134.19 mm): Global Label 'VSENSE_ADC_RAW'
+[label_dangling]: Label not connected
+    ; error
+    @(114.00 mm, 141.81 mm): Global Label 'VSENSE_ADC'
+[label_dangling]: Label not connected
+    ; error
+    @(119.84 mm, 90.54 mm): Global Label 'PWM_FROM_STM32'
+[label_dangling]: Label not connected
+    ; error
+    @(119.84 mm, 95.62 mm): Global Label 'PGND'
+[label_dangling]: Label not connected
+    ; error
+    @(130.00 mm, 77.84 mm): Global Label 'VDD_5V'
+[label_dangling]: Label not connected
+    ; error
+    @(130.00 mm, 98.16 mm): Global Label 'PGND'
+[label_dangling]: Label not connected
+    ; error
+    @(130.00 mm, 134.19 mm): Global Label 'VSENSE_ADC'
+[label_dangling]: Label not connected
+    ; error
+    @(130.00 mm, 141.81 mm): Global Label 'PGND'
+[label_dangling]: Label not connected
+    ; error
+    @(132.00 mm, 187.19 mm): Global Label 'CANH'
+[label_dangling]: Label not connected
+    ; error
+    @(132.00 mm, 194.81 mm): Global Label 'CANL'
+[label_dangling]: Label not connected
+    ; error
+    @(140.16 mm, 90.54 mm): Global Label 'PWM_GATE_DRIVER_RAW'
+[label_dangling]: Label not connected
+    ; error
+    @(154.00 mm, 134.19 mm): Global Label 'VDD_3V3'
+[label_dangling]: Label not connected
+    ; error
+    @(154.00 mm, 141.81 mm): Global Label 'TEMP_ADC'
+[label_dangling]: Label not connected
+    ; error
+    @(154.92 mm, 190.00 mm): Global Label 'CANH'
+[label_dangling]: Label not connected
+    ; error
+    @(154.92 mm, 192.54 mm): Global Label 'CANL'
+[label_dangling]: Label not connected
+    ; error
+    @(154.92 mm, 195.08 mm): Global Label 'PGND'
+[label_dangling]: Label not connected
+    ; error
+    @(155.00 mm, 81.19 mm): Global Label 'PWM_GATE_DRIVER_RAW'
+[label_dangling]: Label not connected
+    ; error
+    @(155.00 mm, 88.81 mm): Global Label 'PWM_GATE_DRIVE'
+[label_dangling]: Label not connected
+    ; error
+    @(170.00 mm, 134.19 mm): Global Label 'TEMP_ADC'
+[label_dangling]: Label not connected
+    ; error
+    @(170.00 mm, 141.81 mm): Global Label 'PGND'
+[label_dangling]: Label not connected
+    ; error
+    @(172.00 mm, 81.19 mm): Global Label 'PWM_GATE_DRIVE'
+[label_dangling]: Label not connected
+    ; error
+    @(172.00 mm, 88.81 mm): Global Label 'PGND'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(18.00 mm, 174.68 mm): Horizontal Wire, length 6.92 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(18.00 mm, 174.68 mm): Horizontal Wire, length 6.92 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(18.00 mm, 177.22 mm): Horizontal Wire, length 6.92 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(18.00 mm, 177.22 mm): Horizontal Wire, length 6.92 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(18.00 mm, 179.76 mm): Horizontal Wire, length 6.92 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(18.00 mm, 179.76 mm): Horizontal Wire, length 6.92 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(18.00 mm, 182.30 mm): Horizontal Wire, length 6.92 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(18.00 mm, 182.30 mm): Horizontal Wire, length 6.92 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(18.00 mm, 184.84 mm): Horizontal Wire, length 6.92 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(18.00 mm, 184.84 mm): Horizontal Wire, length 6.92 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(18.00 mm, 187.38 mm): Horizontal Wire, length 6.92 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(18.00 mm, 187.38 mm): Horizontal Wire, length 6.92 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(18.00 mm, 189.92 mm): Horizontal Wire, length 6.92 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(18.00 mm, 189.92 mm): Horizontal Wire, length 6.92 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(18.00 mm, 192.46 mm): Horizontal Wire, length 6.92 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(18.00 mm, 192.46 mm): Horizontal Wire, length 6.92 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(18.00 mm, 195.00 mm): Horizontal Wire, length 6.92 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(18.00 mm, 195.00 mm): Horizontal Wire, length 6.92 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(20.00 mm, 32.46 mm): Horizontal Wire, length 4.92 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(20.00 mm, 32.46 mm): Horizontal Wire, length 4.92 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(20.00 mm, 35.00 mm): Horizontal Wire, length 4.92 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(20.00 mm, 35.00 mm): Horizontal Wire, length 4.92 mm
+[multiple_net_names]: Both MOTOR_CURRENT_SHUNT_HI and VIN_12V are attached to the same items; MOTOR_CURRENT_SHUNT_HI will be used in the netlist
+    ; warning
+    @(42.38 mm, 140.54 mm): Global Label 'MOTOR_CURRENT_SHUNT_HI'
+    @(24.92 mm, 35.00 mm): Global Label 'VIN_12V'
+[multiple_net_names]: Both CAN_RX and CAN_TX are attached to the same items; CAN_RX will be used in the netlist
+    ; warning
+    @(24.92 mm, 182.30 mm): Global Label 'CAN_RX'
+    @(24.92 mm, 184.84 mm): Global Label 'CAN_TX'
+[footprint_link_issues]: Footprint 'TerminalBlock_Altech_AK300-2_P5.00mm' not found in library 'TerminalBlock'
+    ; warning
+    @(30.00 mm, 35.00 mm): Symbol J1 [Conn_01x02]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(30.00 mm, 86.00 mm): Horizontal Wire, length 4.92 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(30.00 mm, 86.00 mm): Horizontal Wire, length 4.92 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(30.00 mm, 88.54 mm): Horizontal Wire, length 4.92 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(30.00 mm, 88.54 mm): Horizontal Wire, length 4.92 mm
+[footprint_link_issues]: Footprint 'TerminalBlock_Altech_AK300-2_P5.00mm' not found in library 'TerminalBlock'
+    ; warning
+    @(40.00 mm, 86.00 mm): Symbol J2 [Conn_01x02]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(42.38 mm, 140.46 mm): Vertical Wire, length 0.08 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(42.38 mm, 140.46 mm): Vertical Wire, length 0.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(42.38 mm, 145.54 mm): Vertical Wire, length 0.08 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(42.38 mm, 145.54 mm): Vertical Wire, length 0.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(47.46 mm, 135.38 mm): Vertical Wire, length 3.81 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(47.46 mm, 135.38 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(47.46 mm, 146.81 mm): Vertical Wire, length 3.81 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(47.46 mm, 146.81 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(50.00 mm, 31.19 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(50.00 mm, 35.00 mm): Vertical Wire, length 3.81 mm
+[footprint_link_issues]: Footprint 'Fuse_Littelfuse_RXEF' not found in library 'Fuse'
+    ; warning
+    @(50.00 mm, 35.00 mm): Symbol F1 [Fuse]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(54.92 mm, 85.00 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(55.08 mm, 143.00 mm): Horizontal Wire, length 2.54 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(55.08 mm, 143.00 mm): Horizontal Wire, length 2.54 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(54.92 mm, 85.00 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(62.54 mm, 79.92 mm): Vertical Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(62.54 mm, 85.00 mm): Vertical Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(72.00 mm, 31.19 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(72.00 mm, 35.00 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(80.00 mm, 81.19 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(80.00 mm, 85.00 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(82.00 mm, 134.19 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(82.00 mm, 138.00 mm): Vertical Wire, length 3.81 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(87.30 mm, 197.62 mm): Vertical Wire, length 0.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(87.30 mm, 197.62 mm): Vertical Wire, length 0.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(87.30 mm, 200.08 mm): Vertical Wire, length 5.00 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(87.30 mm, 200.08 mm): Vertical Wire, length 5.00 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(95.00 mm, 31.19 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(95.00 mm, 35.00 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(98.00 mm, 134.19 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(98.00 mm, 138.00 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(100.00 mm, 184.84 mm): Vertical Wire, length 2.54 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(100.00 mm, 184.84 mm): Vertical Wire, length 2.54 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(100.00 mm, 202.62 mm): Vertical Wire, length 2.54 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(100.00 mm, 202.62 mm): Vertical Wire, length 2.54 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(102.54 mm, 80.08 mm): Vertical Wire, length 4.92 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(102.54 mm, 85.00 mm): Vertical Wire, length 4.92 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(112.70 mm, 192.46 mm): Vertical Wire, length 0.00 mm
+[multiple_net_names]: Both CANH and CANL are attached to the same items; CANH will be used in the netlist
+    ; warning
+    @(132.00 mm, 187.19 mm): Global Label 'CANH'
+    @(112.70 mm, 192.46 mm): Global Label 'CANL'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(112.70 mm, 197.54 mm): Vertical Wire, length 0.00 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(114.00 mm, 134.19 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(114.00 mm, 138.00 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(119.84 mm, 90.54 mm): Horizontal Wire, length 2.54 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(119.84 mm, 95.62 mm): Horizontal Wire, length 2.54 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(119.84 mm, 90.54 mm): Horizontal Wire, length 2.54 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(119.84 mm, 95.62 mm): Horizontal Wire, length 2.54 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(130.00 mm, 77.84 mm): Vertical Wire, length 2.54 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(130.00 mm, 77.84 mm): Vertical Wire, length 2.54 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(130.00 mm, 95.46 mm): Vertical Wire, length 2.70 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(130.00 mm, 95.46 mm): Vertical Wire, length 2.70 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(130.00 mm, 134.19 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(130.00 mm, 138.00 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(132.00 mm, 187.19 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(132.00 mm, 191.00 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(137.62 mm, 90.54 mm): Horizontal Wire, length 2.54 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(137.62 mm, 90.54 mm): Horizontal Wire, length 2.54 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(154.00 mm, 134.19 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(154.00 mm, 138.00 mm): Vertical Wire, length 3.81 mm
+[footprint_link_issues]: The current configuration does not include the footprint library 'Sensor_Temperature'
+    ; warning
+    @(154.00 mm, 138.00 mm): Symbol RT1 [Thermistor_NTC]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(154.92 mm, 190.00 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(154.92 mm, 192.54 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(154.92 mm, 195.08 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(155.00 mm, 81.19 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(155.00 mm, 85.00 mm): Vertical Wire, length 3.81 mm
+[footprint_link_issues]: Footprint 'TerminalBlock_OnShore_OSTVN03A150' not found in library 'TerminalBlock'
+    ; warning
+    @(160.00 mm, 190.00 mm): Symbol J4 [Conn_01x03]
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(154.92 mm, 190.00 mm): Horizontal Wire, length 5.08 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(154.92 mm, 192.54 mm): Horizontal Wire, length 5.08 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(154.92 mm, 195.08 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(170.00 mm, 134.19 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(170.00 mm, 138.00 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(172.00 mm, 81.19 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(172.00 mm, 85.00 mm): Vertical Wire, length 3.81 mm
+
+ ** ERC messages: 165  Errors 63  Warnings 102
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters
