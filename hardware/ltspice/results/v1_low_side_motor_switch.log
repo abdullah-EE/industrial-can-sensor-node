@@ -1,0 +1,27 @@
+LTspice 24.1.10 for Windows
+Circuit: C:\Users\hayda\OneDrive\Documents\GitHub\industrial-can-sensor-node\hardware\ltspice\v1_low_side_motor_switch.cir
+Start Time: Sun Jul 12 16:15:09 2026
+C:\Users\hayda\OneDrive\Documents\GitHub\industrial-can-sensor-node\hardware\ltspice\v1_low_side_motor_switch.cir(26): Ignoring unknown model parameter. This may or may not be a problem.
+.model NMOS_LOGIC NMOS(Vto=2.0 Kp=80m Rd=20m Rs=10m Rg=2 Cgdmax=1n Cgs=1.5n Cds=200p)
+                                                        ^^^^^^^^^^
+C:\Users\hayda\OneDrive\Documents\GitHub\industrial-can-sensor-node\hardware\ltspice\v1_low_side_motor_switch.cir(26): Ignoring unknown model parameter. This may or may not be a problem.
+.model NMOS_LOGIC NMOS(Vto=2.0 Kp=80m Rd=20m Rs=10m Rg=2 Cgdmax=1n Cgs=1.5n Cds=200p)
+                                                                  ^^^^^^^^^
+C:\Users\hayda\OneDrive\Documents\GitHub\industrial-can-sensor-node\hardware\ltspice\v1_low_side_motor_switch.cir(26): Ignoring unknown model parameter. This may or may not be a problem.
+.model NMOS_LOGIC NMOS(Vto=2.0 Kp=80m Rd=20m Rs=10m Rg=2 Cgdmax=1n Cgs=1.5n Cds=200p)
+                                                                           ^^^^^^^^^
+solver = Normal
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = trap
+AsciiRawFile = true
+Direct Newton iteration for .op point succeeded.
+Total elapsed time: 1.800 seconds.
+
+Files loaded:
+C:\Users\hayda\OneDrive\Documents\GitHub\industrial-can-sensor-node\hardware\ltspice\v1_low_side_motor_switch.cir
+
+i_motor_avg: AVG(I(Rmotor))=0.293581739608 FROM 0.005 TO 0.01
+i_motor_pk: MAX(I(Rmotor))=0.355529999072 FROM 0 TO 0.01
+v_sw_pk: MAX(V(SW))=12.5527299537 FROM 0 TO 0.01

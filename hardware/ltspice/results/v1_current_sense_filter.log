@@ -1,0 +1,16 @@
+LTspice 24.1.10 for Windows
+Circuit: C:\Users\hayda\OneDrive\Documents\GitHub\industrial-can-sensor-node\hardware\ltspice\v1_current_sense_filter.cir
+Start Time: Sun Jul 12 16:15:09 2026
+solver = Normal
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = trap
+AsciiRawFile = true
+Direct Newton iteration for .op point succeeded.
+Total elapsed time: 0.613 seconds.
+
+Files loaded:
+C:\Users\hayda\OneDrive\Documents\GitHub\industrial-can-sensor-node\hardware\ltspice\v1_current_sense_filter.cir
+
+v_isense_max: MAX(V(ISENSE_ADC))=2.5 FROM 0 TO 0.012

@@ -109,3 +109,44 @@ Fix KiCad schematic placement and ERC issues before routing:
 - verify/import exact footprints for terminal blocks, PTC, thermistor, and test points
 - rerun ERC until no genuine errors remain
 - rerun LTspice interactively or fix the batch-output path, then save actual waveform data
+
+## 2026-07-12 Schematic Cleanup Completion Pass
+
+### Completed
+
+- Replaced the temporary project-local symbols with embedded standard KiCad library symbols.
+- Removed `kicad/sym-lib-table` and `kicad/v1_symbols.kicad_sym`; the schematic no longer depends on the temporary `V1:` library.
+- Fixed the remaining D2/C1-style standard-symbol pin connection problems by using standard KiCad passives and correct pin coordinates.
+- Fixed off-grid and dangling connection issues on:
+  - 12 V input connector return
+  - motor connector switch node
+  - TC4427 input/output, power, ground, and unused channel
+  - INA180 power and ground pins
+  - TCAN332 TXD, RXD, VCC, GND, CANH, and CANL
+  - CAN connector pins
+- Reran KiCad ERC and saved the clean report to `hardware/kicad/erc_2026-07-12-current.rpt`.
+- Current ERC result: `0 Errors, 0 Warnings`.
+- Verified there are no unresolved `??` symbols and no `V1:` schematic symbols.
+- Kept PCB routing unstarted.
+- Ran LTspice 24.1.10 in batch ASCII mode and saved actual exported waveform evidence:
+  - `hardware/ltspice/results/motor_switch_voltage_current_flyback.csv`
+  - `hardware/ltspice/results/current_sense_output.csv`
+  - `hardware/ltspice/results/supply_divider_output.csv`
+- Updated `hardware/ltspice/results/README.md` with the simulated signals and LTspice log summaries.
+
+### Remaining Warnings And Blockers
+
+- KiCad ERC has no current warnings or errors.
+- The ERC report still lists ignored check categories:
+  - global label only appears once in the schematic
+  - four connection points are joined together
+  - SPICE model issue
+  - assigned footprint does not match footprint filters
+- Those ignored categories are KiCad check settings, not active violations in the current ERC report. They should be reviewed again before PCB layout.
+- LTspice low-side switch log warns that the simple educational MOSFET model ignored `Cgdmax`, `Cgs`, and `Cds` parameters. The waveform data is still useful for first-order switching/current behavior, but it is not a validated MOSFET vendor model.
+- The selected motor's 0.75 A stall current remains manufacturer-extrapolated and must be measured on the actual motor before final validation.
+- PCB routing has not started.
+
+### Next Task
+
+Open the schematic in KiCad GUI for a visual review, then start footprint verification and PCB planning without routing until the schematic review is accepted.
