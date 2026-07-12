@@ -10,31 +10,35 @@ Command run:
 
 Saved report:
 
-- `hardware/kicad/erc_2026-07-12.rpt`
+- `hardware/kicad/erc_2026-07-12-current.rpt`
 
 Result:
 
 - ERC completed.
-- KiCad reported 165 total violations: 63 errors and 102 warnings.
+- KiCad reported 43 total violations: 4 errors and 39 warnings.
+- The schematic exports a netlist.
+- No literal `??` unresolved-symbol markers remain in `kicad/kicad.kicad_sch`.
+- The project-local symbol library `kicad/v1_symbols.kicad_sym` loads with `kicad-cli sym export svg`.
 
-Important interpretation:
+Remaining errors:
 
-- The schematic file loads in KiCad and exports a netlist.
-- The schematic is not ERC-clean.
-- Most errors are dangling global labels and off-grid wire endpoints caused by the first hand-written symbol placement pass.
-- These are genuine schematic cleanup issues, not justified electrical warnings.
+- D2 pin 2 at `(60.96 mm, 30.48 mm)` is reported unconnected.
+- D2 pin 1 at `(60.96 mm, 40.64 mm)` is reported unconnected.
+- C1 pin 2 at `(78.74 mm, 30.48 mm)` is reported unconnected.
+- C1 pin 1 at `(78.74 mm, 40.64 mm)` is reported unconnected.
 
-Justified warnings:
+Interpretation:
 
-- Several footprint warnings are expected at this stage because exact footprint library mappings for the terminal blocks, PTC fuse, and thermistor need to be checked before layout.
-- The PCB has not been routed, so footprint cleanup remains a pre-layout task.
+- These are genuine schematic cleanup blockers in the input-protection area.
+- The wires and junctions were placed at the reported coordinates, but KiCad still reports the custom vertical TVS/capacitor pins as unconnected. The next pass should replace these temporary project-local vertical symbols with standard KiCad library symbols or redraw the embedded pin geometry in the KiCad GUI.
 
-Unjustified errors that must be fixed next:
+Remaining warnings:
 
-- Dangling labels on power, motor, ADC, CAN, and Nucleo interface nets.
-- Off-grid wire endpoints.
-- A few multiple-net-name warnings caused by the temporary label/wire placement pass.
+- 4 footprint library warnings for terminal-block/fuse symbols.
+- 1 label-multiple-wires warning on `PWM_GATE`.
+- 1 isolated label warning on `TEMP_ADC`.
+- 33 unconnected wire endpoint warnings from the current hand-authored schematic geometry.
 
 Next KiCad task:
 
-Open the schematic in KiCad GUI, snap all symbols and labels to the active connection grid, replace temporary label stubs with normal wires/net labels, add/import any missing footprints, and rerun ERC until only documented footprint or intentional warnings remain.
+Open the schematic in KiCad GUI, replace the temporary project-local passives with standard library symbols where possible, snap the remaining wires and labels to pins, verify the power and motor-current paths visually, then rerun ERC until there are zero genuine electrical errors.

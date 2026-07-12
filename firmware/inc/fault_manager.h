@@ -18,6 +18,7 @@ enum {
 
 typedef struct {
     fault_flags_t latched;
+    uint32_t overcurrent_timer_ms;
     uint32_t stall_timer_ms;
 } fault_manager_t;
 

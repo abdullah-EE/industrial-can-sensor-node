@@ -2,13 +2,23 @@
 
 ## 2026-07-12
 
-LTspice was searched for locally using common executable names and installation paths:
+LTspice executable located:
 
-- `XVIIx64.exe`
-- `LTspice.exe`
-- `scad3.exe`
+- `C:\Users\hayda\AppData\Local\Programs\ADI\LTspice\LTspice.exe`
 
-No LTspice executable was found on PATH or under the usual `C:\Program Files` locations in this environment, so the simulations were not run and no plots or exported LTspice waveform data were generated.
+Batch simulations attempted:
+
+```powershell
+& 'C:\Users\hayda\AppData\Local\Programs\ADI\LTspice\LTspice.exe' -b hardware\ltspice\v1_low_side_motor_switch.cir
+& 'C:\Users\hayda\AppData\Local\Programs\ADI\LTspice\LTspice.exe' -b hardware\ltspice\v1_current_sense_filter.cir
+& 'C:\Users\hayda\AppData\Local\Programs\ADI\LTspice\LTspice.exe' -b hardware\ltspice\v1_voltage_divider_filter.cir
+```
+
+Result:
+
+- Each command returned exit code 0.
+- No `.raw`, `.log`, `.plt`, `.csv`, or waveform export files were produced in the repository.
+- Therefore no actual waveform evidence is available yet.
 
 Current runnable decks:
 
@@ -16,10 +26,4 @@ Current runnable decks:
 - `../v1_current_sense_filter.cir`
 - `../v1_voltage_divider_filter.cir`
 
-Simulation status:
-
-- Not measured.
-- Not simulated locally.
-- Awaiting LTspice installation or a machine with LTspice available.
-
-Do not present any expected values from the `.cir` files as actual LTspice results.
+Do not present expected values from the `.cir` files as measured or simulated waveform results. The next LTspice task is to run the decks interactively or fix the batch-output path, then save actual exported waveform data under this directory.

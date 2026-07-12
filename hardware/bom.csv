@@ -4,7 +4,7 @@ Motor,1,M1,Pololu,3039,50:1 Micro Metal Gearmotor HPCB 12V; 80 mA no-load; 0.75 
 Power switch,1,Q1,Infineon,IRLZ44NPBF,55 V N-channel logic-level MOSFET,TO-220-3,Selected,Overkill current rating but beginner-friendly and easy to solder/probe,https://www.infineon.com/part/IRLZ44N
 Gate drive,1,U_GATE1,Microchip,TC4427ACPA,1.5 A dual non-inverting MOSFET driver,PDIP-8,Selected,5 V gate drive from Nucleo 5 V rail; unused input grounded,https://www.microchip.com/en-us/product/TC4427A
 Flyback,1,D1,Diodes Incorporated,1N5822,3 A 40 V Schottky rectifier,DO-201AD,Selected,Flyback diode across motor for low-side switching,https://www.diodes.com/part/view/1N5822
-Current sense,1,R_SHUNT1,Bourns,CSS2H-2512R-L500F,0.05 ohm 1 percent current sense resistor,2512,Selected,0.028 W at 0.75 A stall; about 0.072 W at 1.2 A limit,
+Current sense,1,R_SHUNT1,Bourns,CSS2H-2512R-L500F,0.05 ohm 1 percent current sense resistor,2512,Selected,0.028 W at 0.75 A stall; about 0.041 W at 0.90 A firmware shutdown,
 Current sense,1,U_ISENSE1,Texas Instruments,INA180A1IDBVR,Gain 20 V/V current-sense amplifier,SOT-23-5,Selected,0.05 ohm shunt gives 1 V/A into ADC,https://www.ti.com/product/INA180
 Voltage sense,1,R_VTOP1,Yageo,RC0805FR-07100KL,100 k 1 percent,0805,Selected,12 V divider top resistor,
 Voltage sense,1,R_VBOT1,Yageo,RC0805FR-0727KL,27 k 1 percent,0805,Selected,12 V divider bottom resistor,

@@ -28,19 +28,28 @@ I_cont_target = 0.25 * 0.75 A
 I_cont_target = 0.1875 A
 ```
 
-Firmware warning threshold:
+Firmware sustained-stall threshold:
 
 ```text
-I_warn = 0.75 A
+I_stall_detect = 0.60 A
+I_stall_detect / I_stall = 0.60 A / 0.75 A = 80 percent
 ```
 
-Firmware shutdown threshold:
+Firmware overcurrent shutdown threshold:
 
 ```text
-I_shutdown = 1.20 A
+I_shutdown = 0.90 A
+I_shutdown / I_stall = 0.90 A / 0.75 A = 120 percent
 ```
 
-Why the shutdown threshold is above stall current: the measured current can briefly spike during startup and PWM edges. The firmware threshold should catch abnormal sustained current without nuisance-tripping instantly. First tests still use a bench supply current limit below or near 1 A.
+Timing strategy:
+
+```text
+overcurrent debounce = 10 ms above 0.90 A
+stall debounce = 150 ms above 0.60 A while PWM is commanded
+```
+
+Why this replaced the earlier 1.20 A shutdown threshold: the selected motor's stall current is only 0.75 A, and the manufacturer warns that stall operation can damage the motor or gearbox. A 1.20 A threshold is too high for a first bench build because it is 160 percent of the extrapolated stall current. Version 1 now uses 0.90 A as a short-duration critical threshold and 0.60 A as a sustained-stall threshold. First tests should still use a bench supply current limit around 0.5 A to 0.8 A until measured motor data exists.
 
 ## Motor Winding Approximation For Simulation
 
@@ -79,8 +88,8 @@ P_Q_stall = 0.75^2 * 0.035
 P_Q_stall = 0.0197 W
 
 P_Q_shutdown = I_shutdown^2 * RDS(on)
-P_Q_shutdown = 1.20^2 * 0.035
-P_Q_shutdown = 0.0504 W
+P_Q_shutdown = 0.90^2 * 0.035
+P_Q_shutdown = 0.0284 W
 ```
 
 Beginner meaning: the MOSFET should barely warm up in this Version 1 current range. The bigger risk is wiring/layout mistakes, not MOSFET heat.
@@ -167,11 +176,11 @@ V_isense = 0.75 A * 1.0 V/A = 0.75 V
 ADC_counts = 0.75 / 3.3 * 4095 = 931 counts
 ```
 
-At firmware shutdown current:
+At firmware overcurrent shutdown current:
 
 ```text
-V_isense = 1.20 A * 1.0 V/A = 1.20 V
-ADC_counts = 1.20 / 3.3 * 4095 = 1489 counts
+V_isense = 0.90 A * 1.0 V/A = 0.90 V
+ADC_counts = 0.90 / 3.3 * 4095 = 1117 counts
 ```
 
 ADC full-scale current:
@@ -184,7 +193,7 @@ Shunt power:
 
 ```text
 P_shunt_stall = 0.75^2 * 0.05 = 0.028 W
-P_shunt_shutdown = 1.20^2 * 0.05 = 0.072 W
+P_shunt_shutdown = 0.90^2 * 0.05 = 0.041 W
 P_shunt_3A = 3.0^2 * 0.05 = 0.45 W
 ```
 
@@ -290,6 +299,7 @@ These losses are small. Thermal testing is still required because wiring, diode 
 - Nominal supply: 12 V
 - Intended continuous motor current: about 0.19 A or less until measured
 - Motor stall current from manufacturer: 0.75 A extrapolated
-- Firmware overcurrent shutdown: 1.20 A
+- Firmware overcurrent shutdown: 0.90 A for 10 ms
+- Firmware sustained-stall threshold: 0.60 A for 150 ms while PWM is commanded
 - ADC current full scale: about 3.3 A
-- Bench supply current limit for first test: 0.5 A to 1.0 A
+- Bench supply current limit for first test: 0.5 A to 0.8 A

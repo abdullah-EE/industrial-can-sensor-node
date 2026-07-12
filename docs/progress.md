@@ -46,9 +46,9 @@
   - Texas Instruments INA180A1IDBVR current-sense amplifier
   - Texas Instruments TCAN332DR CAN transceiver
 - Added `docs/design_calculations.md` with current, voltage, power, thermal, ADC-scaling, divider, shunt, MOSFET, diode, fuse, and TVS calculations.
-- Updated firmware current thresholds to match the selected small motor:
-  - stall detection current: 0.75 A
-  - overcurrent shutdown: 1.20 A
+- Updated firmware current thresholds for the selected small motor:
+  - sustained-stall detection current: 0.60 A for 150 ms
+  - overcurrent shutdown: 0.90 A for 10 ms
 - Updated LTspice motor model resistance to 16 ohm from the selected motor's 12 V / 0.75 A stall estimate.
 - Replaced the KiCad text-only roadmap with a first real-symbol schematic pass using KiCad symbols for the MOSFET, diode, gate driver, INA180, TCAN332, connectors, protection, sensing, and passives.
 - Confirmed the new KiCad schematic loads and exports a netlist.
@@ -70,12 +70,42 @@
 - No local C compiler or CMake was available on PATH, so the firmware scaffold was not compiled in this environment.
 - LTspice files were updated but not simulated here because LTspice was not installed.
 
+## 2026-07-12 KiCad Repair Pass
+
+### Completed
+
+- Removed literal `??` unresolved-symbol markers from the schematic.
+- Added a project-local symbol library at `kicad/v1_symbols.kicad_sym` and a project `sym-lib-table`.
+- Verified the project-local symbol library loads by exporting SVGs with KiCad CLI.
+- Verified `kicad/kicad.kicad_sch` exports a netlist with KiCad CLI.
+- Reran KiCad ERC and saved the current report to `hardware/kicad/erc_2026-07-12-current.rpt`.
+- Reviewed the old 1.20 A current shutdown threshold against the selected motor's 0.75 A extrapolated stall current.
+- Changed firmware fault timing to:
+  - overcurrent: 0.90 A for 10 ms
+  - sustained stall: 0.60 A for 150 ms while PWM is commanded
+- Located LTspice at `C:\Users\hayda\AppData\Local\Programs\ADI\LTspice\LTspice.exe`.
+- Attempted LTspice batch runs for all three decks.
+
+### Blockers And Uncertainties
+
+- KiCad ERC is still not clean: current result is 43 violations, 4 errors, and 39 warnings.
+- The 4 remaining ERC errors are input-protection symbol connection errors:
+  - D2 pin 2 at `(60.96 mm, 30.48 mm)`
+  - D2 pin 1 at `(60.96 mm, 40.64 mm)`
+  - C1 pin 2 at `(78.74 mm, 30.48 mm)`
+  - C1 pin 1 at `(78.74 mm, 40.64 mm)`
+- Remaining ERC warnings are 4 footprint library warnings, 1 `PWM_GATE` label-multiple-wires warning, 1 isolated `TEMP_ADC` label warning, and 33 unconnected wire endpoint warnings.
+- The schematic exports and has no `??` text, but the input-protection passives still need a KiCad GUI or standard-library-symbol cleanup before the schematic can be called electrically complete.
+- LTspice batch commands returned exit code 0 but produced no `.raw`, `.log`, `.plt`, `.csv`, or exported waveform files. No simulation evidence exists yet.
+- No PCB routing was started.
+
 ### Next Task
 
 Fix KiCad schematic placement and ERC issues before routing:
 
+- replace temporary project-local vertical passives with standard KiCad library symbols or valid corrected embedded symbols
 - snap all symbols, wires, and labels to KiCad's connection grid
 - fix all dangling labels and multiple-net-name warnings
 - verify/import exact footprints for terminal blocks, PTC, thermistor, and test points
 - rerun ERC until no genuine errors remain
-- run LTspice on a machine with LTspice installed and save real waveform data
+- rerun LTspice interactively or fix the batch-output path, then save actual waveform data
