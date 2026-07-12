@@ -1813,7 +1813,321 @@
 		)
 		(embedded_fonts no)
 	)
-	(symbol "Device:R"
+		(symbol "Transistor_FET:IRLIZ44N"
+		(pin_names
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "Q"
+			(at 5.08 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "IRLIZ44N"
+			(at 5.08 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220F-3_Vertical"
+			(at 5.08 -1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "http://www.irf.com/product-info/datasheets/data/irliz44n.pdf"
+			(at 5.08 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "30A Id, 55V Vds, 22mOhm Rds, N-Channel HEXFET Power MOSFET, TO-220AB"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "N-Channel HEXFET MOSFET Logic-Level"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "TO?220F*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "IRLIZ44N_0_1"
+			(polyline
+				(pts
+					(xy 0.254 1.905) (xy 0.254 -1.905)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.254 0) (xy -2.54 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 2.286) (xy 0.762 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 0.508) (xy 0.762 -0.508)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 -1.27) (xy 0.762 -2.286)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(circle
+				(center 1.651 0)
+				(radius 2.794)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 2.54) (xy 2.54 1.778)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 2.54 1.778)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(circle
+				(center 2.54 -1.778)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "IRLIZ44N_1_1"
+			(pin input line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "G"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 5.08 270)
+				(length 2.54)
+				(name "D"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 -5.08 90)
+				(length 2.54)
+				(name "S"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Device:R"
 		(pin_numbers
 			(hide yes)
 		)
@@ -3202,7 +3516,7 @@
 	(symbol (lib_id "Connector_Generic:Conn_01x02") (at 35.56 35.56 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "71000000-0000-4000-8000-000000000005")
 		(property "Reference" "J1" (at 35.56 30.48 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "12V_INPUT" (at 35.56 39.37 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm" (at 35.56 35.56 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Footprint" "Project_Footprints:OnShore_OSTVN02A150" (at 35.56 35.56 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "" (at 35.56 35.56 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(instances (project "kicad" (path "/" (reference "J1") (unit 1))))
 	)
@@ -3213,7 +3527,7 @@
 	(symbol (lib_id "Device:Fuse") (at 59.69 35.56 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "71000000-0000-4000-8000-000000000010")
 		(property "Reference" "F1" (at 59.69 30.48 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "RXEF110_PTC" (at 59.69 39.37 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "Fuse:Fuseholder_Clip-5x20mm_Littelfuse_111_Inline_P20.00x5.00mm_D1.05mm_Horizontal" (at 59.69 35.56 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Footprint" "Project_Footprints:Littelfuse_RXEF110" (at 59.69 35.56 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "" (at 59.69 35.56 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(instances (project "kicad" (path "/" (reference "F1") (unit 1))))
 	)
@@ -3246,7 +3560,7 @@
 	(symbol (lib_id "Connector_Generic:Conn_01x02") (at 35.56 95.25 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "71000000-0000-4000-8000-000000000025")
 		(property "Reference" "J2" (at 35.56 90.17 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "MOTOR_OUT" (at 35.56 100.33 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm" (at 35.56 95.25 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Footprint" "Project_Footprints:OnShore_OSTVN02A150" (at 35.56 95.25 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "" (at 35.56 95.25 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(instances (project "kicad" (path "/" (reference "J2") (unit 1))))
 	)
@@ -3265,7 +3579,7 @@
 	(label "VMOTOR_12V" (at 60.96 95.25 180) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "71000000-0000-4000-8000-000000000032"))
 	(wire (pts (xy 73.66 95.25) (xy 78.74 95.25)) (stroke (width 0) (type solid)) (uuid "71000000-0000-4000-8000-000000000033"))
 	(label "MOTOR_SW" (at 78.74 95.25 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "71000000-0000-4000-8000-000000000034"))
-	(symbol (lib_id "Device:Q_NMOS") (at 105.41 100.33 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "71000000-0000-4000-8000-000000000035")
+	(symbol (lib_id "Transistor_FET:IRLIZ44N") (at 105.41 100.33 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "71000000-0000-4000-8000-000000000035")
 		(property "Reference" "Q1" (at 105.41 95.25 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "IRLZ44NPBF" (at 105.41 105.41 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical" (at 105.41 100.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
@@ -3273,11 +3587,11 @@
 		(instances (project "kicad" (path "/" (reference "Q1") (unit 1))))
 	)
 	(wire (pts (xy 107.95 105.41) (xy 107.95 110.49)) (stroke (width 0) (type solid)) (uuid "71000000-0000-4000-8000-000000000036"))
-	(label "MOTOR_SW" (at 107.95 110.49 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "71000000-0000-4000-8000-000000000037"))
+	(label "MOTOR_CURRENT_SHUNT_HI" (at 107.95 110.49 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "71000000-0000-4000-8000-000000000037"))
 	(wire (pts (xy 100.33 100.33) (xy 95.25 100.33)) (stroke (width 0) (type solid)) (uuid "71000000-0000-4000-8000-000000000038"))
 	(label "PWM_GATE" (at 95.25 100.33 180) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "71000000-0000-4000-8000-000000000039"))
 	(wire (pts (xy 107.95 95.25) (xy 107.95 90.17)) (stroke (width 0) (type solid)) (uuid "71000000-0000-4000-8000-000000000040"))
-	(label "MOTOR_CURRENT_SHUNT_HI" (at 107.95 90.17 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "71000000-0000-4000-8000-000000000041"))
+	(label "MOTOR_SW" (at 107.95 90.17 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "71000000-0000-4000-8000-000000000041"))
 	(symbol (lib_id "Device:R") (at 124.46 105.41 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "71000000-0000-4000-8000-000000000042")
 		(property "Reference" "R1" (at 124.46 100.33 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "0.05R_SHUNT" (at 124.46 110.49 0) (effects (font (size 1.27 1.27))))
@@ -3390,7 +3704,28 @@
 	(label "VSENSE_ADC" (at 144.78 115.57 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "71000000-0000-4000-8000-000000000097"))
 	(wire (pts (xy 144.78 128.27) (xy 144.78 133.35)) (stroke (width 0) (type solid)) (uuid "71000000-0000-4000-8000-000000000098"))
 	(label "PGND" (at 144.78 133.35 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "71000000-0000-4000-8000-000000000099"))
-	(symbol (lib_id "Connector_Generic:Conn_01x09") (at 54.61 180.34 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "71000000-0000-4000-8000-000000000100")
+		(symbol (lib_id "Device:C") (at 165.1 123.19 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "72000000-0000-4000-8000-000000000001")
+		(property "Reference" "C6" (at 165.1 118.11 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "100nF_INA180" (at 165.1 128.27 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 165.1 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "" (at 165.1 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "kicad" (path "/" (reference "C6") (unit 1))))
+	)
+	(wire (pts (xy 165.1 119.38) (xy 165.1 114.3)) (stroke (width 0) (type solid)) (uuid "72000000-0000-4000-8000-000000000002"))
+	(label "VDD_3V3" (at 165.1 114.3 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "72000000-0000-4000-8000-000000000003"))
+	(wire (pts (xy 165.1 127.0) (xy 165.1 132.08)) (stroke (width 0) (type solid)) (uuid "72000000-0000-4000-8000-000000000004"))
+	(label "PGND" (at 165.1 132.08 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "72000000-0000-4000-8000-000000000005"))
+	(symbol (lib_id "Device:C") (at 185.42 123.19 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "72000000-0000-4000-8000-000000000006")
+		(property "Reference" "C7" (at 185.42 118.11 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "100nF_TCAN332" (at 185.42 128.27 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 185.42 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "" (at 185.42 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "kicad" (path "/" (reference "C7") (unit 1))))
+	)
+	(wire (pts (xy 185.42 119.38) (xy 185.42 114.3)) (stroke (width 0) (type solid)) (uuid "72000000-0000-4000-8000-000000000007"))
+	(label "VDD_3V3" (at 185.42 114.3 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "72000000-0000-4000-8000-000000000008"))
+	(wire (pts (xy 185.42 127.0) (xy 185.42 132.08)) (stroke (width 0) (type solid)) (uuid "72000000-0000-4000-8000-000000000009"))
+	(label "PGND" (at 185.42 132.08 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "72000000-0000-4000-8000-000000000010"))(symbol (lib_id "Connector_Generic:Conn_01x09") (at 54.61 180.34 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "71000000-0000-4000-8000-000000000100")
 		(property "Reference" "J3" (at 54.61 175.26 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "NUCLEO_HEADER" (at 54.61 185.42 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical" (at 54.61 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
@@ -3429,7 +3764,7 @@
 	(symbol (lib_id "Device:Thermistor_NTC") (at 110.49 180.34 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "71000000-0000-4000-8000-000000000124")
 		(property "Reference" "TH1" (at 110.49 175.26 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "10k_NTC" (at 110.49 185.42 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 110.49 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" (at 110.49 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "" (at 110.49 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(instances (project "kicad" (path "/" (reference "TH1") (unit 1))))
 	)
@@ -3470,7 +3805,7 @@
 	(symbol (lib_id "Connector_Generic:Conn_01x03") (at 219.71 180.34 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "71000000-0000-4000-8000-000000000147")
 		(property "Reference" "J4" (at 219.71 175.26 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "CAN_BUS" (at 219.71 185.42 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-03P_1x03_P5.00mm" (at 219.71 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Footprint" "Project_Footprints:OnShore_OSTVN03A150" (at 219.71 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "" (at 219.71 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(instances (project "kicad" (path "/" (reference "J4") (unit 1))))
 	)

@@ -150,3 +150,43 @@ Fix KiCad schematic placement and ERC issues before routing:
 ### Next Task
 
 Open the schematic in KiCad GUI for a visual review, then start footprint verification and PCB planning without routing until the schematic review is accepted.
+
+## 2026-07-12 PCB Preparation Pass
+
+### Completed
+
+- Verified and corrected critical footprint/pin mapping before placement.
+- Corrected Q1 so IRLZ44NPBF pin 1 is gate, pin 2 is drain to `MOTOR_SW`, and pin 3 is source to `MOTOR_CURRENT_SHUNT_HI`.
+- Added local decoupling capacitors C6 and C7 for INA180 and TCAN332.
+- Added project footprints for selected parts not covered exactly by stock KiCad footprints:
+  - `Project_Footprints:Littelfuse_RXEF110`
+  - `Project_Footprints:OnShore_OSTVN02A150`
+  - `Project_Footprints:OnShore_OSTVN03A150`
+- Updated `hardware/bom.csv` for the On Shore connector pitch and the actual decoupling capacitor references.
+- Created a 120 mm x 80 mm two-layer PCB outline.
+- Placed components by function:
+  - input protection near power input
+  - motor connector, flyback diode, MOSFET, and shunt close together
+  - gate driver near MOSFET/gate resistor
+  - INA180 near shunt
+  - CAN transceiver near CAN connector
+  - test points near the lower board edge
+- Added four M3 mounting holes and simple silkscreen zone labels.
+- Ran KiCad schematic ERC: `0 Errors, 0 Warnings`.
+- Ran KiCad PCB DRC with schematic parity and saved `hardware/kicad/drc_2026-07-12-pcb-prep.rpt`.
+- Confirmed the PCB has `0` routed tracks.
+- Created `docs/pcb_plan.md`.
+
+### Remaining Warnings And Blockers
+
+- PCB routing has not started by request.
+- PCB DRC reports `60` unconnected items because there are no routed traces yet.
+- PCB DRC physical placement reports `0` violations.
+- Schematic parity reports `8` expected footprint warnings:
+  - 4 missing PWR_FLAG footprints because power flags are schematic-only
+  - 4 extra mounting-hole footprints because mounting holes are PCB-only mechanical parts
+- Before routing, visually review the board in KiCad and confirm the project-specific terminal block and PTC footprints against the actual purchased parts or printed 1:1 paper fit.
+
+### Next Task
+
+Perform a visual KiCad PCB review, then route only after confirming footprint fit and placement.
